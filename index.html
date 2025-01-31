@@ -1,23 +1,144 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> 
+<html lang="en">
 <head>
-    <style>
-        body {
-            background-color: rgb(170, 146, 210);
-        }
-        h1 {
-            color: black;
-            text-align: center;
-        }
-        p {
-            font-family: 'Times New Roman';
-            font-size: 20px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!--Link to the external CSS file-->
+    
+    <link rel="stylesheet" href="testing.css">
 </head>
 <body>
-    <h1>My First CSS Example</h1>
-    <p>This is a paragraph.</p>
+    
+    <!--Header section-->
+    <header>
+            
+        <!--Heading of the website-->
+        <h1>Tech Blog</h1>
+        <!--ByteSizeInsights logo-->
+        <img src = "logo.png" alt = "ByteSize Insights Logo" width ="250">
+        
+            
+    </header>
+
+    <!--Horizonal line to divide sections-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container">
+            <!-- Brand (Optional, Remove if not needed) -->
+            <a class="navbar-brand d-lg-none" href="#">Menu</a>
+    
+            <!-- Navbar Toggler (Aligns to the Right) -->
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Navbar Links (Centered) -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="form.html">Sign-Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+
+
+    <!--Main section-->
+    <main>
+        
+        <!--Main header-->
+        <h1 class="tech-news">
+            Tech News!
+        </h1>
+        
+        <!--Container for the articles-->
+        
+        <div class = "article-container">
+        
+            <!--Link to S25 article-->
+            <a href = "s25.html" class="news-link">
+                
+                <!--Sections the individual articles-->
+                <section class = "news1">
+                    
+                    <!--Article heading-->
+                    <h2>
+                    Samsung s25 
+                    </h2>
+                    
+                    <!--Creates a figure for the image so that it can have a caption-->
+                    <figure>
+                        
+                        <!--Image of the S25-->
+                        <img src = "s25.jpg" width = "850" alt = "Samsung S25">
+                    </figure>
+                    
+                    <!--Caption for the image-->
+                    <figcaption>
+                        First look at the Samsung S25 before release!
+                    </figcaption>
+                            
+                </section>
+            </a>
+
+            <!--Link to iphone 17 article-->
+            <a href = "iphone17.html" class="news-link">
+                
+                <!--Sections the individual articles-->
+                <section class = "news2">
+                    
+                    <!--Article heading-->
+                    <h2>
+                        Iphone 17
+                    </h2>
+                    
+                    <!--Creates a figure for the image so that it can have a caption-->
+                    <figure>
+                        
+                        <!--Image of the iphone 17-->
+                        <img src = "iphone 17.jpg" width = "850" alt = "Samsung S25">
+                    </figure>
+                   
+                    <!--Caption for the image-->
+                    <figcaption>
+                        First iphone 17 leaks!
+                    </figcaption>
+                        
+                </section>
+            </a>
+        </div>
+    </main>
+    
+    
+    <!--Footer section-->
+    <footer>
+        <!-- Thank you text -->
+        <p>Thank you for visiting!</p>
+        
+        <!-- Email form container -->
+        <div class="email-container">
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+            <a class="arrow" href="form.html">→</a>
+        </div>
+    </footer>
+
 </body>
 </html>
- 
