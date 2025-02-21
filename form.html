@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Specifies HTML5 document type and sets language to English -->
 
 <head>
+    <!-- Character encoding and viewport settings for responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Blog</title>
 
+    <!-- External CSS file for custom styles -->
     <link rel="stylesheet" href="testing.css">
 
+    <!-- Bootstrap 5.3.3 CSS and JavaScript CDN links with integrity checks for security -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+    <!-- Custom JavaScript file -->
+    <script src="main.js"></script>
 </head>
 
 <body>
+    <!-- Header section with logo and title -->
     <header class="text-center py-4">
+        <!-- Logo image with specified width and alt text for accessibility -->
         <img src="logo.png" alt="ByteSize Insights Logo" width="250">
         <h1>Newsletter Sign Up</h1>
     </header>
 
+    <!-- Bootstrap responsive navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-black">
         <div class="container">
+            <!-- Mobile menu button, only visible on small screens -->
             <a class="navbar-brand d-lg-none" href="#">Menu</a>
             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Navigation links container -->
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
+                    <!-- Navigation menu items -->
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
@@ -37,36 +48,44 @@
                         <a class="nav-link" href="form.html">Sign-Up</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- Main content section -->
     <main class="py-5">
         <div class="container">
             <div class="row justify-content-center">
+                <!-- Centered column for form content -->
                 <div class="col-md-8">
+                    <!-- Card container with shadow effect -->
                     <div class="card shadow-lg p-4">
+                        <!-- Sign-up form -->
                         <form>
+                            <!-- Personal Information section -->
                             <fieldset>
                                 <legend>Personal Information</legend>
+                                <!-- Full name input field -->
                                 <div class="mb-3">
                                     <label for="fullname" class="form-label">Full Name:</label>
                                     <input type="text" id="fullname" name="fullname" class="form-control"
                                         placeholder="Enter your name..." required>
                                 </div>
 
+                                <!-- Email input field -->
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email:</label>
                                     <input type="email" id="email" name="email" class="form-control"
                                         placeholder="Enter your email..." required>
                                 </div>
 
+                                <!-- Age input field with min/max validation -->
                                 <div class="mb-3">
                                     <label for="age" class="form-label">Age:</label>
                                     <input type="number" name="age" class="form-control" id="age" min="12" max="99"
@@ -74,13 +93,16 @@
                                 </div>
                             </fieldset>
 
+                            <!-- Preferences section -->
                             <fieldset>
                                 <legend>Preferences</legend>
+                                <!-- Checkbox for updates -->
                                 <div class="form-check">
                                     <input type="checkbox" name="interest" class="form-check-input" id="updates"
                                         value="updates">
                                     <label for="updates" class="form-check-label">Sign Up for Updates</label>
                                 </div>
+                                <!-- Checkbox for newsletter -->
                                 <div class="form-check">
                                     <input type="checkbox" name="interest" class="form-check-input" id="newsletter"
                                         value="newsletter">
@@ -88,19 +110,17 @@
                                 </div>
                             </fieldset>
 
+                            <!-- Form buttons container -->
                             <div class="mt-4 d-flex justify-content-between">
-                                
-                                
-                               
-                                <button type="reset" class="btn btn-primary">Reset</button>
-
-
+                                <!-- Reset button -->
+                                <button type="reset" class="btn btn-danger">Reset</button>
+                                <!-- Submit button -->
                                 <button type="submit" class="btn btn-primary">Submit</button>
-                                
                             </div>
                         </form>
                     </div>
 
+                    <!-- Success message container -->
                     <div class="message mt-4 text-center text-success">
                         <p>Thanks for your support!</p>
                     </div>
@@ -109,12 +129,12 @@
         </div>
     </main>
 
-        
-    <footer class = "form-footer">
+    <!-- Footer section -->
+    <footer class="form-footer">
+        <!-- Note: bg-#000000 is incorrect Bootstrap syntax, should be bg-dark -->
         <div class="bg-#000000 text-white text-center py-3">
-        <p>Thank you for visiting!</p>
+            <p>Thank you for visiting!</p>
+        </div>
     </footer>
-
 </body>
-
 </html>

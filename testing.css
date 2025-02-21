@@ -1,161 +1,155 @@
-/* General Styles */
+/* === Base Styles === */
 body {
-    font-family: "Inter", sans-serif; /* Modern font */
-    background-color: #FFFFFF; /* White background */
-    color: #000000; /* Black text */
-    font-size: 16px;
-    line-height: 1.6;
+    font-family: "Inter", sans-serif; /* Modern sans-serif font for better readability */
+    background-color: #FFFFFF; /* Clean white background */
+    color: #000000; /* High contrast black text */
+    font-size: 16px; /* Base font size */
+    line-height: 1.6; /* Comfortable line height for readability */
 }
 
-/* Header */
+/* === Header Styling === */
 header {
-    background-color: #C8102E; /* Red background */
-    color: #FFFFFF; /* White text */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px
+    background-color: #C8102E; /* Brand color red for visual impact */
+    color: #FFFFFF; /* White text for contrast */
+    display: flex; /* Flexbox for layout control */
+    align-items: center; /* Vertical centering */
+    justify-content: space-between; /* Spread items across header */
+    padding: 20px;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-size: 50px; /* Large, impactful heading size */
+    font-weight: bold; /* Bold weight for emphasis */
+    text-transform: uppercase; /* All caps for visual hierarchy */
 }
 
-.tech-news{
-    padding: 20px 20px 0 20px
+/* === Content Section Spacing === */
+.tech-news {
+    padding: 20px 20px 0 20px; /* Consistent spacing around content */
 }
 
-/* Navigation Bar */
-.bar {
-    background-color: #000000; /* Black background */
-    height: 65px;
-}
-
+/* === Navigation Styling === */
 ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+    list-style: none; /* Remove default list bullets */
+    display: flex; /* Horizontal navigation layout */
+    justify-content: center; /* Center nav items */
+    background: black; /* Dark background for contrast */
+    padding: 15px;
 }
 
 li {
-    margin: 0 15px;
+    margin: 0 15px; /* Horizontal spacing between nav items */
+    color: white; /* Light text on dark background */
+    font-size: 20px;
 }
 
 li a {
-    color: #FFFFFF; /* White text */
-    font-size: 36px;
-    text-decoration: none;
-    padding: 15px 20px;
+    color: #FFFFFF; /* White text for nav links */
+    font-size: 36px; /* Large, clickable link size */
+    text-decoration: none; /* Remove default underline */
+    padding: 15px 20px; /* Generous click area */
 }
 
 li a:hover {
-    background-color: #C8102E; /* Red on hover */
-    transition: 0.3s;
+    background-color: #C8102E; /* Red background on hover for interaction feedback */
+    transition: 0.3s; /* Smooth transition for hover effect */
 }
 
-/* News Sections */
+/* === News Article Styling === */
 .news1, .news2 {
-    border: 2px solid #C8102E; /* Red border */
-    background-color: #F5F5F5; /* Light gray background */
+    border: 2px solid #C8102E; /* Red border for brand consistency */
+    background-color: #F5F5F5; /* Light gray for content areas */
     padding: 20px;
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out;
-    text-decoration: none
+    border-radius: 10px; /* Rounded corners */
+    transition: all 0.3s ease-in-out; /* Smooth transitions for interactions */
+    text-decoration: none;
+    max-width: 700px; /* Limit width for readability */
 }
 
+/* === News Link Styling === */
 a.news-link {
-    text-decoration: none; /* Remove default underline from links */
-    color: inherit; /* Inherit text color from parent */
-    display: block; /* Make link a block-level element */
+    text-decoration: none; /* Clean link appearance */
+    color: inherit; /* Maintain parent text color */
+    display: block; /* Full-width clickable area */
 }
 
+/* Hover effects for news items */
 a.news-link:hover .news1,
 a.news-link:hover .news2 {
-    background-color: #C8102E; /* Red on hover */
-    color: #FFFFFF; /* White text */
-    transform: scale(1.02);
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: #C8102E; /* Brand red on hover */
+    color: #FFFFFF; /* White text for contrast */
+    transform: scale(1.02); /* Slight growth for hover feedback */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
 }
 
-/* Footer */
-footer {
-    background-color: #000000;
-    color: white;
-    text-align: center;
-    padding:30px
-}
-
+/* === Article Layout === */
 .article-container {
-    display: flex; /* Use flexbox for layout */
-    align-items: flex-start; /* Align items to the start of the container */
-    justify-content: space-between; /* Space out items evenly */
-    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 20px
-    
+    display: flex; /* Flexbox layout */
+    align-items: flex-start; /* Top-align items */
+    justify-content: space-between; /* Even spacing */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    padding: 10px 10px 20px; /* Consistent padding */
 }
 
-
+/* === Responsive Design === */
 @media (max-width: 768px) {
-
+    /* Mobile-specific adjustments */
     .news1, .news2 {
-        max-width: 100%;  /* Ensure news sections take full width */
-        margin: 10px 0;   /* Reduce margin between news sections */
+        max-width: 100%; /* Full width on mobile */
+        margin: 10px 0; /* Vertical spacing */
     }
 
     .article-container {
-        flex-direction: column; /* Stack items vertically */
-        gap: 10px; /* Reduce gap between items */
+        flex-direction: column; /* Stack vertically on mobile */
+        gap: 10px;
     }
 
     header img {
-        max-height: 120px; /* Reduce the size of the logo on smaller screens */
+        max-height: 120px; /* Smaller logo on mobile */
     }
 
     header {
-        flex-direction: column; /* Stack the header items vertically */
-        gap: 10px; /* Add gap between header elements */
+        flex-direction: column; /* Stack header items */
+        gap: 10px;
     }
 
     img {
-        max-width: 80%; /* Makes the image smaller on small screens */
+        max-width: 80%; /* Smaller images on mobile */
     }
-
-    
 }
 
+/* === Image Handling === */
 img {
-    max-width: 100%; /* Makes the image responsive */
-    height: auto; /* Maintains aspect ratio */
+    max-width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
 }
 
+/* === Footer Styling === */
 footer {
-    background-color: #000000;
+    background-color: #000000; /* Dark background */
     color: white;
-    display: flex; /* Use flexbox to arrange items vertically */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px 0;
-    height: auto; /* Ensure footer takes enough space */
+    height: auto;
 }
 
 footer p {
-    font-size: 1.2rem; /* Adjust text size for better readability */
-    margin-bottom: 20px; /* Space between text and email form */
+    font-size: 1.2rem; /* Larger footer text */
+    margin-bottom: 20px;
 }
 
+/* === Email Form Styling === */
 .email-container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    width: 100%;  /* Ensure it takes full width */
-    max-width: 600px; /* Optionally limit the width of the form */
-    text-align: center; /* Center the text inside the form */
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
 }
 
 .email-container input {
@@ -163,47 +157,58 @@ footer p {
     font-size: 1rem;
     border: 2px solid #ddd;
     border-radius: 5px;
-    width: 200px; /* Limit the width of the input field */
+    width: 200px;
 }
 
-.arrow {
-    font-size: 1.5rem;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-}
-
+/* === Carousel Controls === */
 .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    background-color: black;
+.carousel-control-next-icon {
+    background-color: black; /* Dark carousel controls */
 }
 
-  /* Reduce the space between the arrows */
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 2; /* Adjust the width of the control buttons */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Adjust vertical centering */
-}
-  
-  /* Optional: Adjust the width of the arrow buttons */
-  .carousel-control-prev,
-  .carousel-control-next {
-    padding: 0; /* Remove padding to reduce space */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 200px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
 }
 
-
-.card{
+/* === Card Styling === */
+.card {
     transition: all 0.3s ease-in-out;
-    text-decoration: none
+    text-decoration: none;
 }
 
 .card:hover {
-    background-color: #C8102E; /* Red on hover */
-    color: #FFFFFF; /* White text */
+    background-color: #C8102E; /* Brand color on hover */
+    color: #FFFFFF;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.form-footer{
-    height: 150px
+/* === Utility Classes === */
+.form-footer {
+    height: 150px;
+}
+
+#ce {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* === Carousel Alignment === */
+.carousel-inner {
+    text-align: center;
+}
+
+.carousel-item img {
+    margin: 0 auto; /* Center carousel images */
+}
+
+.arrow{
+    text-decoration: none; /* Remove default underline */
+    color: white
+
 }
